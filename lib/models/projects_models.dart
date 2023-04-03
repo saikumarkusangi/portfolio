@@ -17,6 +17,7 @@ class ProjectsModel {
         required this.tags,
         required this.githubLink,
         required this.livePreview,
+        
     });
 
     String projectName;

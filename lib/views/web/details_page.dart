@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/views/web/widgets/footer.dart';
 
 class DetailsPage extends StatefulWidget {
   String images;
@@ -18,7 +19,7 @@ class _DetailsPageState extends State<DetailsPage> {
           SliverGrid.builder(
             itemCount: images.length,
             gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(
+                const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 1,
                   childAspectRatio: 2
                 ),
@@ -27,7 +28,8 @@ class _DetailsPageState extends State<DetailsPage> {
                 width: MediaQuery.of(context).size.width,
                 child: Image.network(images[index],fit: BoxFit.cover,));
             },
-          )
+          ),
+       const Footer()
         ],
       ),
     );
