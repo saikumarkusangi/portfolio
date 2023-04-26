@@ -15,6 +15,7 @@ class CustomAppBar extends StatelessWidget {
     return SliverAppBar(
       snap: true,
       floating: true,
+      automaticallyImplyLeading: false,
       leadingWidth: 100,
       expandedHeight: 100,
       backgroundColor: Colors.white,
@@ -148,10 +149,9 @@ class CustomAppBar extends StatelessWidget {
                   child: InkWell(
                     onTap: () {
                       appbarHoverProvider.setCurrentTab(index: 3);
-                      Navigator.push(
+                      Navigator.pushNamed(
                           context,
-                          MaterialPageRoute(
-                              builder: (_) => const WebCertificates()));
+                        '/certificates');
                     },
                     child: Text(
                       'CERTIFICATES',

@@ -45,10 +45,9 @@ class CustomMobileAppBar extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           appbarHoverProvider.setCurrentTab(index: 0);
-                          Navigator.push(
+                          Navigator.pushNamed(
                               context,
-                              MaterialPageRoute(
-                                  builder: (_) => const MobileHomePage()));
+                              '/home');
                         },
                         child: Text(
                           'HOME',
@@ -109,10 +108,10 @@ class CustomMobileAppBar extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           appbarHoverProvider.setCurrentTab(index: 2);
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => const WebResume()));
+                          Navigator.pushNamed(context,
+                             '/resume');
                         },
-                        child: Text(
+                        child: Text(  
                           'RESUME',
                           style: TextStyle(
                               decoration: (appbarHoverProvider.currentTab == 2)
@@ -141,10 +140,9 @@ class CustomMobileAppBar extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           appbarHoverProvider.setCurrentTab(index: 3);
-                          Navigator.push(
+                          Navigator.pushNamed(
                               context,
-                              MaterialPageRoute(
-                                  builder: (_) => const MobileCertificates()));
+                             '/certificates');
                         },
                         child: Text(
                           'CERTIFICATES',

@@ -31,11 +31,13 @@ class _MobileHomePageState extends State<MobileHomePage> {
       body: CustomScrollView(
         slivers: [
      const  SliverAppBar(
+        automaticallyImplyLeading: false,
  snap: true,floating: true,
  elevation: 0,backgroundColor: Colors.white,
         
         ),
           SliverToBoxAdapter(
+            
             child: Image.asset(
               'assets/images/mobile_background.gif',
               fit: BoxFit.fitWidth,
